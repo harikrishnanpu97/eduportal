@@ -1,0 +1,275 @@
+{% extends 'base.html' %}
+
+{% block title_content %} 
+Computer Science Department
+{% endblock %}
+
+{% block content %}
+
+
+<style>
+    header {
+     background-color:  rgba(0, 0, 0, 0.600);
+     color: #fff;
+     text-align: center;
+   }
+
+     body {
+       background-image: url('https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+       background-repeat: no-repeat;
+       text-align: center;
+       background-size: cover;
+   }
+
+
+   main {
+     padding: 20px;
+   }
+
+   h2 {
+     color: #FFFFFF;
+   }
+   
+   ul {
+     list-style-type: none;
+     padding: 0;
+   }
+
+   .form-container {
+       background-color: rgba(0, 0, 0, 0.442);
+       padding: 20px;
+       border-radius: 10px;
+       max-width: 400px;
+       margin: 0 auto;
+   }
+
+   .collapsible {
+       background-color: #064030;
+       color: white;
+       cursor: pointer;
+       padding: 18px;
+       width: 100%;
+       border: none;
+       text-align: left;
+       outline: none;
+       font-size: 15px;
+     }
+     
+   .collapsible:hover {
+       background-color: #0d8c69;
+     }
+     
+     .content {
+       padding: 0 18px;
+       max-height: 0;
+       overflow: hidden;
+       transition: max-height 0.2s ease-out;
+       background-color: #f1f1f1;
+     }
+
+     .about-section {
+       background-color: rgba(0, 0, 0, 0.500);
+       border-radius: 10px;
+       padding: 20px;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+       margin-bottom: 20px;
+   }
+
+
+   .team-section {
+     background-color: #064030;
+     color: #fff;
+     border-radius: 10px;
+     padding: 20px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     margin-bottom: 20px;
+ }
+
+
+ </style>
+
+<header>
+   <h1>Computer Science Department</h1>
+   <p>Greenwood University</p>
+ </header>
+
+ <div class="row">
+   <div class="column">
+     <div class="form-container" style="color: aliceblue;">
+       <h2>Bachelor's Course Structure</h2>
+       <ul>
+         <li style="font-weight: bold; font-size: 15px;">Duration: 3-4 years (depending on the program structure).</li>
+<br>
+         <li style="font-weight: bold; font-size: 15px;">Semester Start: Usually in August or September.</li>
+       </ul>
+          
+       <section id="undergraduate">
+         <button class="collapsible">Core Courses</button>
+         <div class="content" style="color: #000000; text-align: left;">
+           <ul>
+            <li style="font-weight: bold;">Introduction to Computer Science</li>
+            <li style="font-weight: bold;">Data Structures and Algorithms</li>
+            <li style="font-weight: bold;">Computer Architecture</li>
+            <li style="font-weight: bold;">Operating Systems</li>
+            <li style="font-weight: bold;">Database Management Systems</li>
+            <li style="font-weight: bold;">Software Engineering</li>
+            <li style="font-weight: bold;">Computer Networks</li>
+           </ul>
+         </div>
+         
+ 
+         <button class="collapsible">Electives</button>
+         <div class="content" style="color: #000000; text-align: left;">
+           <ul>
+            <li style="font-weight: bold;">Artificial Intelligence</li>
+            <li style="font-weight: bold;">Machine Learning</li>
+            <li style="font-weight: bold;">Cybersecurity</li>
+            <li style="font-weight: bold;">Web Development</li>
+           </ul>
+         </div>
+       </section>
+     </div>
+   </div>
+ 
+   <div class="column">
+     <div class="form-container" style="color: aliceblue;">
+       <h2>Master's Course Structure</h2>
+       <ul>
+         <li style="font-weight: bold; font-size: 15px;">Duration: 1-2 years (Masters) or 3-5 years (Ph.D.).</li>
+<br>
+         <li style="font-weight: bold; font-size: 15px;">Semester Start: Typically in August or September for Masters programs; Ph.D. programs may have rolling admissions.</li>
+       </ul>
+       <section id="postgraduation">
+         <button class="collapsible">Core Courses</button>
+         <div class="content" style="color: #000000; text-align: left;">
+           <ul>
+            <li style="font-weight: bold;">Advanced Algorithms</li>
+            <li style="font-weight: bold;">Computer Vision</li>
+            <li style="font-weight: bold;">Big Data Analytics</li>
+            <li style="font-weight: bold;">Cloud Computing</li>
+            <li style="font-weight: bold;">Internet of Things (IoT)</li>
+            <li style="font-weight: bold;">Natural Language Processing</li>
+            <li style="font-weight: bold;">Software Development Methodologies</li>
+           </ul>
+         </div>
+       </section>
+     </div>
+   </div>
+ 
+   <div class="column">
+     <div class="form-container" style="color: aliceblue;">
+       <h2>Diploma Course Structure</h2>
+       <ul>
+         <li style="font-weight: bold; font-size: 15px;">Duration: 1-2 years (Masters) or 3-5 years (Ph.D.).</li>
+<br>
+         <li style="font-weight: bold; font-size: 15px;">Semester Start: Typically in August or September for Masters programs; Ph.D. programs may have rolling admissions.</li>
+       </ul>
+       <section id="diploma">
+         <button class="collapsible">Core Courses</button>
+         <div class="content" style="color: #000000; text-align: left;">
+           <ul>
+            <li style="font-weight: bold;">Advanced Research Topics in Computer Science</li>
+            <li style="font-weight: bold;">Dissertation Proposal in Computer Science</li>
+            <li style="font-weight: bold;">Specialized Topics in Computer Science</li>
+            <li style="font-weight: bold;">Ethics in Computing</li>
+            <li style="font-weight: bold;">Teaching Practicum in Computer Science</li>
+            <li style="font-weight: bold;">Dissertation Research and Writing in Computer Science</li>
+           </ul>
+         </div>
+       </section>
+     </div>
+   </div>
+ 
+ 
+ <div class="row">
+   <div class="column">
+     <div class="form-container" style="color: aliceblue;">
+       <h2>Doctorate (Ph.D) Course Structure</h2>
+       <ul>
+         <li style="font-weight: bold; font-size: 15px;">Duration: Typically 3-5 years (may vary based on research and dissertation work).</li>
+
+         <li style="font-weight: bold; font-size: 15px;">Semester Start: Rolling admissions, often with ongoing research projects.</li>
+       </ul>
+       <section id="doctorate">
+         <button class="collapsible">Core Courses</button>
+         <div class="content" style="color: #000000; text-align: left;">
+           <ul>
+            <li style="font-weight: bold;">Advanced Research Methodologies in Computer Science</li>
+            <li style="font-weight: bold;">Literature Review in Computer Science</li>
+            <li style="font-weight: bold;">Advanced Programming Techniques</li>
+            <li style="font-weight: bold;">Grant Writing and Funding in Computer Science</li>
+            <li style="font-weight: bold;">Specialized Seminars in Computer Science Topics</li>
+            <li style="font-weight: bold;">Dissertation Research and Writing in Computer Science</li>
+           </ul>
+         </div>
+       </section>
+     </div>
+   </div>
+ 
+   <div class="column">
+     <div class="form-container" style="color: aliceblue;">
+       <h2>Foundation Course Structure</h2>
+       <ul>
+         <li style="font-weight: bold; font-size: 15px;">Duration: Varies based on the program, typically 1 year.</li>
+
+         <li style="font-weight: bold; font-size: 15px;">Semester Start: Generally aligned with undergraduate intake, often in August or September.</li>
+       </ul>
+       <section id="foundation">
+         <button class="collapsible">Core Courses</button>
+         <div class="content" style="color: #000000; text-align: left;">
+           <ul>
+            <li style="font-weight: bold;">Introduction to Computer Science Concepts</li>
+            <li style="font-weight: bold;">Basic Mathematics for Computer Science</li>
+            <li style="font-weight: bold;">Introduction to Programming</li>
+            <li style="font-weight: bold;">Fundamentals of Data Structures</li>
+            <li style="font-weight: bold;">Computer Networking Basics</li>
+            <li style="font-weight: bold;">Introduction to Software Engineering</li>
+            <li style="font-weight: bold;">Database Management Fundamentals</li>
+            <li style="font-weight: bold;">Web Development Basics</div>
+             </ul>
+       </section>
+     </div>
+   </div>
+
+
+   <div class="row">
+     <div class="col-md-6">
+         <div class="about-section">
+             <section id="graduate">
+                 <h2>Scholarships and Financial Aid</h2>
+                 <hr>
+                 <p style="color: white; font-weight: bold;">Greenwood University offers scholarships and financial aid programs for eligible Computer Science students. Reach out to the university for more details on how to apply and avail of these opportunities to support your academic journey in computer science.</p>
+             </section>
+         </div>
+     </div>
+     <div class="col-md-6">
+         <div class="team-section">
+             <h2>Our Team</h2>
+             <hr>
+             <p>Meet Our Team of Experts Who Are Dedicated to Your Success in Computer Science</p>
+<p>Our team comprises experienced computer scientists, software engineers, and IT professionals, all united by a common goal: to provide comprehensive support and guidance for your academic and professional journey in the field of computer science. Each member of our team brings unique expertise and dedication to their respective roles, ensuring that you receive the highest quality of assistance.</p>
+<p>From professors to industry experts in various fields of computer science, our team collaborates seamlessly to provide you with the resources and mentorship needed to excel in your studies and future career. We are committed to fostering a supportive and inclusive environment where students feel empowered to explore their passion for technology and innovation.</p>
+         </div>
+     </div>
+ </div>
+ 
+
+<script>
+
+
+ var coll = document.getElementsByClassName("collapsible");
+ var i;
+
+ for (i = 0; i < coll.length; i++) {
+   coll[i].addEventListener("click", function() {
+     this.classList.toggle("active");
+     var content = this.nextElementSibling;
+     if (content.style.maxHeight) {
+       content.style.maxHeight = null;
+     } else {
+       content.style.maxHeight = content.scrollHeight + "px";
+     }
+   });
+ }
+   </script>
+{% endblock %}

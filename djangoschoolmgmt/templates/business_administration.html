@@ -1,0 +1,277 @@
+{% extends 'base.html' %}
+
+{% block title_content %} 
+Business Administration Department
+{% endblock %}
+
+{% block content %}
+
+<style>
+    header {
+    background-color:  rgba(0, 0, 0, 0.600);
+     color: #fff;
+     text-align: center;
+   }
+
+     body {
+       background-image: url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+       background-repeat: no-repeat;
+       text-align: center;
+       background-size: cover;
+   }
+
+
+   main {
+     padding: 20px;
+   }
+
+   h2 {
+     color: #FFFFFF;
+   }
+   
+   ul {
+     list-style-type: none;
+     padding: 0;
+   }
+
+   .form-container {
+       background-color: rgba(0, 0, 0, 0.442);
+       padding: 20px;
+       border-radius: 10px;
+       max-width: 400px;
+       margin: 0 auto;
+   }
+
+   .collapsible {
+       background-color: #064030;
+       color: white;
+       cursor: pointer;
+       padding: 18px;
+       width: 100%;
+       border: none;
+       text-align: left;
+       outline: none;
+       font-size: 15px;
+     }
+     
+   .collapsible:hover {
+       background-color: #0d8c69;
+     }
+     
+     .content {
+       padding: 0 18px;
+       max-height: 0;
+       overflow: hidden;
+       transition: max-height 0.2s ease-out;
+       background-color: #f1f1f1;
+     }
+
+     .about-section {
+       background-color: rgba(0, 0, 0, 0.500);
+       border-radius: 10px;
+       padding: 20px;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+       margin-bottom: 20px;
+   }
+
+
+   .team-section {
+     background-color: #064030;
+     color: #fff;
+     border-radius: 10px;
+     padding: 20px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     margin-bottom: 20px;
+ }
+
+
+
+ </style>
+
+<header>
+   <h1>Business Administration Department</h1>
+   <p>Greenwood University</p>
+ </header>
+
+ <div class="row">
+   <div class="column">
+     <div class="form-container" style="color: aliceblue;">
+       <h2>Bachelor's Course Structure</h2>
+       <ul>
+         <li style="font-weight: bold; font-size: 15px;">Duration: 3-4 years (depending on the program structure).</li>
+<br>
+         <li style="font-weight: bold; font-size: 15px;">Semester Start: Usually in August or September.</li>
+       </ul>
+          
+       <section id="undergraduate">
+         <button class="collapsible">Core Courses</button>
+         <div class="content" style="color: #000000; text-align: left;">
+           <ul>
+            <li style="font-weight: bold;">Introduction to Business Administration</li>
+            <li style="font-weight: bold;">Principles of Management</li>
+            <li style="font-weight: bold;">Business Ethics and Corporate Social Responsibility</li>
+            <li style="font-weight: bold;">Marketing Management</li>
+            <li style="font-weight: bold;">Financial Management</li>
+            <li style="font-weight: bold;">Operations Management</li>
+            <li style="font-weight: bold;">Strategic Management</li>
+           </ul>
+         </div>
+         
+ 
+         <button class="collapsible">Electives</button>
+         <div class="content" style="color: #000000; text-align: left;">
+           <ul>
+            <li style="font-weight: bold;">Entrepreneurship</li>
+            <li style="font-weight: bold;">Human Resource Management</li>
+            <li style="font-weight: bold;">International Business</li>
+            <li style="font-weight: bold;">Business Analytics</li>
+           </ul>
+         </div>
+       </section>
+     </div>
+   </div>
+ 
+   <div class="column">
+     <div class="form-container" style="color: aliceblue;">
+       <h2>Master's Course Structure</h2>
+       <ul>
+         <li style="font-weight: bold; font-size: 15px;">Duration: 1-2 years (Masters) or 3-5 years (Ph.D.).</li>
+<br>
+         <li style="font-weight: bold; font-size: 15px;">Semester Start: Typically in August or September for Masters programs; Ph.D. programs may have rolling admissions.</li>
+       </ul>
+       <section id="postgraduation">
+         <button class="collapsible">Core Courses</button>
+         <div class="content" style="color: #000000; text-align: left;">
+           <ul>
+            <li style="font-weight: bold;">Advanced Business Strategy</li>
+            <li style="font-weight: bold;">Business Leadership and Change Management</li>
+            <li style="font-weight: bold;">Business Analytics and Decision Making</li>
+            <li style="font-weight: bold;">Financial Reporting and Analysis</li>
+            <li style="font-weight: bold;">Global Business Environment</li>
+            <li style="font-weight: bold;">Marketing Strategy</li>
+            <li style="font-weight: bold;">Supply Chain Management</li>
+           </ul>
+         </div>
+       </section>
+     </div>
+   </div>
+ 
+   <div class="column">
+     <div class="form-container" style="color: aliceblue;">
+       <h2>Diploma Course Structure</h2>
+       <ul>
+         <li style="font-weight: bold; font-size: 15px;">Duration: 1-2 years (Masters) or 3-5 years (Ph.D.).</li>
+<br>
+         <li style="font-weight: bold; font-size: 15px;">Semester Start: Typically in August or September for Masters programs; Ph.D. programs may have rolling admissions.</li>
+       </ul>
+       <section id="diploma">
+         <button class="collapsible">Core Courses</button>
+         <div class="content" style="color: #000000; text-align: left;">
+           <ul>
+            <li style="font-weight: bold;">Advanced Business Research Topics</li>
+            <li style="font-weight: bold;">Dissertation Proposal in Business Administration</li>
+            <li style="font-weight: bold;">Specialized Topics in Business Management</li>
+            <li style="font-weight: bold;">Ethics in Business Research</li>
+            <li style="font-weight: bold;">Teaching Practicum in Business</li>
+            <li style="font-weight: bold;">Dissertation Research and Writing in Business Administration</li>  
+           </ul>
+         </div>
+       </section>
+     </div>
+   </div>
+ 
+ 
+ <div class="row">
+   <div class="column">
+     <div class="form-container" style="color: aliceblue;">
+       <h2>Doctorate (Ph.D) Course Structure</h2>
+       <ul>
+         <li style="font-weight: bold; font-size: 15px;">Duration: Typically 3-5 years (may vary based on research and dissertation work).</li>
+
+         <li style="font-weight: bold; font-size: 15px;">Semester Start: Rolling admissions, often with ongoing research projects.</li>
+       </ul>
+       <section id="doctorate">
+         <button class="collapsible">Core Courses</button>
+         <div class="content" style="color: #000000; text-align: left;">
+           <ul>
+            <li style="font-weight: bold;">Advanced Research Methodologies in Business</li>
+            <li style="font-weight: bold;">Literature Review in Business Administration</li>
+            <li style="font-weight: bold;">Advanced Data Analysis Techniques in Business</li>
+            <li style="font-weight: bold;">Grant Writing and Funding in Business Research</li>
+            <li style="font-weight: bold;">Specialized Seminars in Business Topics</li>
+            <li style="font-weight: bold;">Dissertation Research and Writing in Business</li>
+          </ul>
+           </ul>
+         </div>
+       </section>
+     </div>
+   </div>
+ 
+   <div class="column">
+     <div class="form-container" style="color: aliceblue;">
+       <h2>Foundation Course Structure</h2>
+       <ul>
+         <li style="font-weight: bold; font-size: 15px;">Duration: Varies based on the program, typically 1 year.</li>
+
+         <li style="font-weight: bold; font-size: 15px;">Semester Start: Generally aligned with undergraduate intake, often in August or September.</li>
+       </ul>
+       <section id="foundation">
+         <button class="collapsible">Core Courses</button>
+         <div class="content" style="color: #000000; text-align: left;">
+           <ul>
+            <li style="font-weight: bold;">Introduction to Business Concepts</li>
+            <li style="font-weight: bold;">Basic Economics for Business</li>
+            <li style="font-weight: bold;">Mathematics for Business</li>
+            <li style="font-weight: bold;">Introduction to Business Research</li>
+            <li style="font-weight: bold;">Fundamentals of Management</li>
+            <li style="font-weight: bold;">Business Environment Analysis</li>
+            <li style="font-weight: bold;">Laboratory Skills and Techniques for Business</li>
+            <li style="font-weight: bold;">Introduction to Business Analytics</li>
+          </ul>
+       </section>
+     </div>
+   </div>
+
+
+   <div class="row">
+     <div class="col-md-6">
+         <div class="about-section">
+             <section id="graduate">
+                 <h2>Scholarships and Financial Aid</h2>
+                 <hr>
+                 <p style="color: white; font-weight: bold;">Greenwood University offers scholarships and financial aid programs for eligible Business Administration students. Reach out to the university for more details.</p>
+             </section>
+         </div>
+     </div>
+     <div class="col-md-6">
+         <div class="team-section">
+             <h2>Our Team</h2>
+             <hr>
+             <p>Meet Our Team of Experts Who Are Dedicated to Your Success</p>
+              <p>Our team comprises experienced professors, dedicated administrative staff, and industry professionals, all united by a common goal: to provide comprehensive support and guidance to our Business Administration students. Each member of our team brings unique expertise and dedication to their respective roles, ensuring that you receive the highest quality of education and support.</p>
+              <p>From academic advisors to industry mentors, our team collaborates seamlessly to develop tailored learning experiences that address your individual goals and aspirations. We are committed to fostering a supportive and inclusive environment where students feel empowered to thrive and succeed in their academic and professional endeavors.</p>
+         </div>
+     </div>
+ </div>
+ 
+
+<script>
+
+
+ var coll = document.getElementsByClassName("collapsible");
+ var i;
+
+ for (i = 0; i < coll.length; i++) {
+   coll[i].addEventListener("click", function() {
+     this.classList.toggle("active");
+     var content = this.nextElementSibling;
+     if (content.style.maxHeight) {
+       content.style.maxHeight = null;
+     } else {
+       content.style.maxHeight = content.scrollHeight + "px";
+     }
+   });
+ }
+   </script>
+{% endblock %}
+

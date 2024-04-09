@@ -1,0 +1,212 @@
+{% extends 'base.html' %}
+
+{% block title_content %} 
+Department Home Page
+{% endblock %}
+
+{% block content %} 
+
+<style>
+    body {
+        background-image: url('https://images.unsplash.com/photo-1582481725274-d63bdf929a90?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        background-repeat: no-repeat;
+        text-align: center;
+        background-size: cover;
+    }
+
+    
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; 
+    width: 100%;
+  }
+  
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(11, 12, 12, 0.7);
+    opacity: 0;
+    transition: opacity 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .image-container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .overlay a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .text {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slide-container {
+  overflow: hidden;
+  width: 100%;
+  height: 200px; 
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.7); 
+}
+
+.slide {
+  display: flex;
+  width: 400%; 
+  animation: slide-animation 20s infinite alternate; 
+}
+
+.slide p {
+  flex: 1;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+@keyframes slide-animation {
+  0% {
+      transform: translateX(0);
+  }
+  20% {
+      transform: translateX(0); 
+  }
+  25% {
+      transform: translateX(-25%);
+  }
+  45% {
+      transform: translateX(-25%); 
+  }
+  50% {
+      transform: translateX(-50%);
+  }
+  70% {
+      transform: translateX(-50%); 
+  }
+  75% {
+      transform: translateX(-75%);
+  }
+  95% {
+      transform: translateX(-75%); 
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+h4 {
+  position: relative; 
+  z-index: 2;
+  color: white;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 10px; 
+}
+
+
+</style>
+
+
+<div class="container text-center" >
+<h1 style="background-color: rgba(0, 0, 0, 0.6); color:white">Departments</h1>
+
+
+<div class="row">
+    <div class="column">
+      <div class="image-container">
+        <img src="https://images.unsplash.com/photo-1581594549595-35f6edc7b762?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Biology">
+        <div class="overlay">
+          <a href="{% url 'biology' %}" style="text-decoration: none; color: white;">
+            <div class="text">Biology Department</div>
+        </a>
+        </div>
+    </div>
+</div>
+
+    <div class="column">
+      <div class="image-container">
+          <img src="https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Business Administration">
+          <div class="overlay">
+              <a href="{% url 'business_administration_detail' pk=pk %}" style="text-decoration: none; color: white;">
+                  <div class="text">Business Administration</div>
+              </a>
+          </div>
+      </div>
+  </div>
+  
+    <div class="column">
+      <div class="image-container">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Computer Science">
+        <div class="overlay">
+          <a href="{% url 'computer_science_detail' dept_id=department.pk %}">
+            <div class="text">Computer Science</div>
+        </a>
+            </div>
+        </div>
+    </div>      
+</div>
+
+<br>
+
+<div class="slide-container">
+  <div class="slide">
+    
+      <p style="font-weight: bold; font-size: 18px;" > Faculty and Research
+        <br>
+        Our distinguished faculty members are experts in various fields of biology, conducting cutting-edge research in genetics, ecology, microbiology, and more. Students have opportunities to engage in research projects, internships, and fieldwork, gaining hands-on experience and contributing to scientific advancements.</p>
+
+      <p style="font-weight: bold; font-size: 18px;" >Facilities and Resources
+        <br>
+        Students have access to extensive libraries, online databases, and research facilities.</p>
+
+       
+        <p style="font-weight: bold; font-size: 18px;" >Student Support Services
+          <br>
+          Our dedicated team provides academic advising, career counseling, and mentorship to help students succeed in their academic and professional goals. We also offer health and wellness services for student well-being.</p>
+
+          <p style="font-weight: bold; font-size: 18px;" >Extracurricular Activities
+            <br>
+            Explore opportunities to join related clubs, attend seminars, and participate in research conferences to enhance your academic experience and network with peers and professionals.</p>
+  </div>
+</div>
+
+<br>
+<div>
+  <h4> Check the corresponding department pages to know more about the updates and events coming.</h4>
+  </div>
+
+{% endblock %}

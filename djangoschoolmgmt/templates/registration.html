@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Registration
+{% endblock %}
+
+{% block content %}
+
+<style>
+    .form-container {
+        background-color: rgba(0, 0, 0, 0.5); 
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 3; 
+    }
+    
+    .form-container form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .form-container form input[type="text"],
+    .form-container form input[type="email"],
+    .form-container form textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    
+    .form-container form button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .form-container form button:hover {
+        background-color: #0056b3;
+    }
+
+    body {
+        background-image: url('https://images.unsplash.com/photo-1582481725274-d63bdf929a90?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        background-repeat: no-repeat;
+        text-align: center;
+        background-size: cover;
+    }
+
+    h1 {
+        position: relative;
+        z-index: 3; 
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+    }
+
+    nav.custom-navbar {
+        position: relative;
+        z-index: 3; 
+    }
+
+    footer {
+        position: relative;
+        z-index: 3; 
+    }
+
+    .about-section {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        max-width: 700px; 
+        margin: 0 auto; 
+        z-index: 1; 
+    }
+</style>
+<body>
+
+<h1 class="text-center">Registration for External Course</h1>
+
+<div class="form-container w-50 text-center p-3 my-5">
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <button class="btn btn-primary mb-4" type="submit">Submit</button>
+    </form>
+</div>
+
+<div class="about-section">
+    <div class="row">
+        <h2 class="strong">Welcome Message</h2>
+        <p class="lead">"Registration is the first step towards unlocking a world of opportunities at Greenwood University. Join our community and become part of a vibrant network dedicated to lifelong learning and growth."</p>
+        <p>Our community is a vital part of Greenwood University, and we welcome all individuals to join us. Whether you're a prospective student, an alumni, or a supporter, you are valued and essential to our mission.</p>
+        <p>Join us for events, networking opportunities, and lifelong learning experiences. Together, we can make a positive impact and create a brighter future.</p>
+    </div>
+</div>
+    </body>
+{% endblock %}
